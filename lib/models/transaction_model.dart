@@ -2,20 +2,20 @@ import 'package:flutter/foundation.dart';
 
 class TransactionModel {
   final int id;
-  final String banco;
-  final String loja;
-  final double valor;
-  final String pagamento;
-  final String data;
-
+  final String bank;
+  final String store;
+  final double value;
+  final String payment;
+  final String date;
 
   TransactionModel({
     @required this.id,
-    @required this.banco,
-    @required this.loja,
-    @required this.valor,
-    @required this.pagamento,
-    @required this.data,
-
+    @required this.bank,
+    @required this.store,
+    @required this.value,
+    @required this.payment,
+    @required this.date,
   });
 }
+
+

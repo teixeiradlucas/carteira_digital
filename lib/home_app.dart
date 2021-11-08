@@ -1,7 +1,6 @@
 import 'package:carteira_digital/components/transactions.dart';
 import 'package:flutter/material.dart';
 import 'components/nu_card.dart';
-import 'models/transaction_model.dart';
 
 class HomeApp extends StatelessWidget {
   @override
@@ -12,19 +11,19 @@ class HomeApp extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          height: 10,
-          width: 1000,
+          height: 20,
+          width: _sizewidth,
         ),
         NuCard(
           widthcard: _sizewidth * 0.85,
           heightcard: _sizewidth * 0.49,
         ),
         SizedBox(
-          height: 10,
-          width: 10,
+          height: 20,
+          width: _sizewidth,
         ),
         Transactions(),
-        Text(transactions[0].toString())
+        
       ],
     );
   }
