@@ -1,6 +1,6 @@
 import 'package:carteira_digital/constants.dart';
 import 'package:carteira_digital/data/transaction_data.dart';
-
+import '../constants.dart';
 import 'package:flutter/material.dart';
 
 class Transactions extends StatelessWidget {
@@ -10,7 +10,6 @@ class Transactions extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        //color: Colors.blue,
       ),
       height: 380,
       width: 350,
@@ -18,12 +17,12 @@ class Transactions extends StatelessWidget {
         itemCount: transactionData.transactions.length,
         itemBuilder: (context, index) {
           return Card(
-            color: Colors.red[400],
+            color: primaryColor,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  //color: Colors.blue,
                   height: 50,
                   width: 50,
                   child: Image.asset(() {
@@ -49,11 +48,13 @@ class Transactions extends StatelessWidget {
                     ),
                     Text(
                       transactionData.transactions[index].date,
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.white),
                     ),
                   ],
                 ),
                 Container(
+                  height: 17,
+                  width: 80,
                   child: Text(
                     "R\$ ${transactionData.transactions[index].value.toStringAsFixed(2)}",
                   ),

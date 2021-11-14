@@ -1,5 +1,6 @@
 import 'package:carteira_digital/home_app.dart';
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 void main() => runApp(App());
 
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red[400],
+          backgroundColor: primaryColor,
           title: Center(child: Text('Carteira')),
         ),
         body: HomeApp(),

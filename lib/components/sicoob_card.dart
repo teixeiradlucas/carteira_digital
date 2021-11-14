@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-class NuCard extends StatelessWidget {
+class SicoobCard extends StatelessWidget {
   double widthcard;
   double heightcard;
-  NuCard({
+  SicoobCard({
     @required this.widthcard,
     @required this.heightcard,
   });
@@ -15,7 +15,10 @@ class NuCard extends StatelessWidget {
     print(_sizewidth);
     return Row(
       children: [
-        SizedBox(height: 10,width: 10,),
+        SizedBox(
+          height: 10,
+          width: 10,
+        ),
         Container(
           width: widthcard,
           height: heightcard,
@@ -23,7 +26,7 @@ class NuCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             color: Colors.blue,
             gradient: LinearGradient(
-              colors: [nuColor.withOpacity(0.7), nuColor],
+              colors: [sicoobColor.withOpacity(0.5), sicoobColor],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),
@@ -38,9 +41,9 @@ class NuCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Image.asset(
-                    mastercardLogo,
-                    height: 50,
-                    width: 50,
+                    sicoobLogo,
+                    height: 65,
+                    width: 65,
                   ),
                   SizedBox(
                     height: 30,
@@ -49,14 +52,14 @@ class NuCard extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 25,
-                width: 25,
+                height: 18,
+                width: 18,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '**** **** **** 8055',
+                    '**** **** **** 8512',
                     style: TextStyle(
                         fontFamily: 'LouisGeorgeCafe',
                         color: Colors.white,
@@ -71,17 +74,8 @@ class NuCard extends StatelessWidget {
               Row(
                 children: [
                   SizedBox(
-                    height: 30,
-                    width: 30,
-                  ),
-                  Image.asset(
-                    nubankLogo,
-                    height: 65,
-                    width: 65,
-                  ),
-                  SizedBox(
                     height: 10,
-                    width: 10,
+                    width: 105,
                   ),
                   Text(
                     'LUCAS F TEIXEIRA',
@@ -90,6 +84,15 @@ class NuCard extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 15,
                     ),
+                  ),
+                  SizedBox(
+                    height: 25,
+                    width: 25,
+                  ),
+                  Image.asset(
+                    mastercardLogo,
+                    height: 50,
+                    width: 50,
                   ),
                 ],
               ),
