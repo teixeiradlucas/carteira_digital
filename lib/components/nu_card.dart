@@ -1,103 +1,93 @@
+import 'package:carteira_digital/constants.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
 
 class NuCard extends StatelessWidget {
-  double widthcard;
-  double heightcard;
-  NuCard({
-    @required this.widthcard,
-    @required this.heightcard,
-  });
+  const NuCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final _sizewidth = MediaQuery.of(context).size.width;
-    print(_sizewidth);
-    return Row(
-      children: [
-        SizedBox(height: 10,width: 10,),
-        Container(
-          width: widthcard,
-          height: heightcard,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.blue,
-            gradient: LinearGradient(
-              colors: [nuColor.withOpacity(0.7), nuColor],
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-            ),
-          ),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 7,
-                width: 7,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Image.asset(
-                    mastercardLogo,
-                    height: 50,
-                    width: 50,
-                  ),
-                  SizedBox(
-                    height: 30,
-                    width: 30,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 25,
-                width: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '**** **** **** 8055',
-                    style: TextStyle(
-                        fontFamily: 'LouisGeorgeCafe',
-                        color: Colors.white,
-                        fontSize: 18),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10,
-                width: 10,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    height: 30,
-                    width: 30,
-                  ),
-                  Image.asset(
-                    nubankLogo,
-                    height: 65,
-                    width: 65,
-                  ),
-                  SizedBox(
-                    height: 10,
-                    width: 10,
-                  ),
-                  Text(
-                    'LUCAS F TEIXEIRA',
-                    style: TextStyle(
-                      fontFamily: 'LouisGeorgeCafe',
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                ],
-              ),
-            ],
+    return Center(
+      child: Container(
+        width: 320,
+        height: 200,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.blue,
+          gradient: LinearGradient(
+            colors: [nuColor.withOpacity(0.7), nuColor],
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
           ),
         ),
-        //SizedBox(height: 10,width: 10,),
-      ],
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 7,
+              width: 7,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Image.asset(
+                  mastercardLogo,
+                  height: 50,
+                  width: 50,
+                ),
+                const SizedBox(
+                  height: 30,
+                  width: 30,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 25,
+              width: 25,
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '**** **** **** 8055',
+                  style: TextStyle(
+                    fontFamily: 'LouisGeorgeCafe',
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+              width: 10,
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  height: 30,
+                  width: 30,
+                ),
+                Image.asset(
+                  nubankLogo,
+                  height: 65,
+                  width: 65,
+                ),
+                const SizedBox(
+                  height: 10,
+                  width: 10,
+                ),
+                const Text(
+                  'LUCAS F TEIXEIRA',
+                  style: TextStyle(
+                    fontFamily: 'LouisGeorgeCafe',
+                    color: Colors.white,
+                    fontSize: 15,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
